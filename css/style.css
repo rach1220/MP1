@@ -283,24 +283,17 @@ div.scroll-container img {
 }
 @media screen and (max-width: 413px) and (orientation:portait) {
     .header {
-        height: 900px;
         background-image: url(../images/bg-mp1_2.png);
-        background-size: auto;
+        background-size: cover;
     }
     .heading {
-        font-size: 8vw;
-        color: navy;
-        font-family: 'Yatra One', cursive;
-        padding: 0 0 0 20px;
+        font-size: 15px;
         text-align: left;
     }
     .sub-text {
-        font-size: 2vw;
-        font-weight: 900;
-        color: rgb(231, 121, 69);
-        font-family: 'Roboto Condensed', sans-serif;
-        justify-content: left;
+        font-size: 10px;
         padding: 0 0 0 60px;
+        text-align: left;
     }
     .book {
         display: flex;
