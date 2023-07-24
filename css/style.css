@@ -40,7 +40,6 @@ a {
     
     .menu li:hover {
       color: var(--secondary);
-      border-radius: 5px;
       transition: 0.2s ease;
     }
     
@@ -76,8 +75,8 @@ a {
     
       .menu li:hover {
         display: inline-block;
-        background-color:#4c9e9e;
-        transition: 0.3s ease;
+        color: var(--secondary);
+        transition: 0.2s ease;
       }
     
       .menu li + li {
@@ -99,7 +98,7 @@ a {
       }
     
       .dropdown li:hover {
-        background-color: #4c9e9e;
+        background-color: var(--bg);
       }
     }
 .header {
@@ -219,6 +218,7 @@ a {
     justify-content: space-around;
     background-color: white;
     border-radius: 20px;
+    padding: 10px 0 10px 0;
 }
 .image-container img {
     padding: 15px 0 0 0;
@@ -281,26 +281,6 @@ div.scroll-container img {
     font-size: 16px;
     color: var(--primary);
 }
-@media screen and (max-width: 413px) {
-    .nav-list:not(:first-child) {display: none;}
-    .nav-list.icon {
-      float: right;
-      display: block;
-    }
-  }
-@media screen and (max-width: 413px) {
-    .nav.responsive {position: relative;}
-    .nav.responsive a.nav-icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .nav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
 @media screen and (max-width: 413px) and (orientation:portait) {
     .header {
         height: 900px;
