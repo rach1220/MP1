@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Roboto+Condensed:wght@300&family=Yatra+One&display=swap');
+:root {
+    --primary: navy;
+    --secondary: rgb(231,121,69);
+    --others: rgb(252,173,219);
+    --bg: rgb(147,199,210);
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  /* NAVBAR STYLING STARTS */
+  .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: var(--bg);
+      color:var(--secondary);
+    }  
+    .nav-links a {
+      color: var(--primary);
+    }
+
+    /* NAVBAR MENU */
+    .menu {
+      display: flex;
+      gap: 1em;
+      font-size: 20px;
+      font-family: 'Comic Neue', cursive;
+      color: var(--primary);
+    }
+    
+    .menu li:hover {
+      color: var(--secondary);
+      border-radius: 5px;
+      transition: 0.2s ease;
+    }
+    
+    .menu li {
+      padding: 5px 14px;
+    }
+    /* RESPONSIVE NAVBAR MENU STARTS */
+  
+  /* CHECKBOX HACK */
+  
+  input[type=checkbox] {
+      display: none;
+    } 
+    
+    /* HAMBURGER MENU */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      user-select: none;
+    }
+    
+    /* APPLYING MEDIA QUERIES */
+    @media (max-width: 768px) {
+     .menu {
+        display:none;
+        position: absolute;
+        background-color: var(--bg);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+      }
+    
+      .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+      }
+    
+      .menu li + li {
+        margin-top: 12px;
+      }
+    
+      input[type=checkbox]:checked ~ .menu {
+        display: block;
+      }
+    
+      .hamburger {
+        display: block;
+      }
+    
+      .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+      }
+    
+      .dropdown li:hover {
+        background-color: #4c9e9e;
+      }
+    }
+.header {
+    height: 900px;
+    background-image: url(../images/bg-mp1_2.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: left;
+}
+.heading {
+    font-size: 100px;
+    color: navy;
+    font-family: 'Yatra One', cursive;
+    padding: 0 0 0 100px;
+    
+}
+.sub-text {
+    font-size: 40px;
+    font-weight: 900;
+    color: rgb(231, 121, 69);
+    font-family: 'Roboto Condensed', sans-serif;
+    justify-content: left;
+    padding: 0 0 0 300px;
+}
+.book {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Comic Neue', cursive;
+    color: var(--primary);
+    padding: 50px 0 0 0;
+}
+.services {
+    display: flex;
+    padding: 20px 100px 0 100px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+.desc {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--primary);
+    font-size: 20px;
+    padding: 0 12px;
+}
+.bookBtn {
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.bookBtn:hover {
+    background-color: var(--bg);
+    color: var(--secondary);
+    transition: .2s;
+}
+.button {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 50px 0 50px 0;
+}
+.gallery-img {
+    margin: 5px;
+    padding: 50px 10px;
+}
+.gallery-img img {
+    border: none;
+    border-radius: 20px;
+    transition: .2s;
+}
+.gallery-img img:hover {
+    transform: scale(1.1);
+}
+.testimonials {
+    background-color: var(--bg);
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Comic Neue', cursive;
+    padding: 200px 0 0 0;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    width: 80%;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+.div {
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 20px;
+}
+.image-container img {
+    padding: 15px 0 0 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    align-content: center;
+}
+.testi {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 180%;
+    color: var(--primary);
+    padding: 0 20px;
+}
+.pet-name-loc {
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+    color: var(--primary);
+}
+.customer {
+    color: var(--primary);
+    font-family: 'Comic Neue', cursive;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 90px;
+    padding: 100px 0 0 0;
+}
+div.scroll-container {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+} 
+div.scroll-container img {
+    padding: 10px;
+    border-radius: 20px;
+}
+.container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    width: 80%;
+    justify-content: space-evenly;
+}
+.footer-title {
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+    color: var(--primary);
+    height: auto;
+}
+.footer-sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    color: var(--primary);
+}
+@media screen and (max-width: 413px) {
+    .nav-list:not(:first-child) {display: none;}
+    .nav-list.icon {
+      float: right;
+      display: block;
+    }
+  }
+@media screen and (max-width: 413px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive a.nav-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+@media screen and (max-width: 413px) and (orientation:portait) {
+    .header {
+        height: 900px;
+        background-image: url(../images/bg-mp1_2.png);
+        background-size: auto;
+    }
+    .heading {
+        font-size: 8vw;
+        color: navy;
+        font-family: 'Yatra One', cursive;
+        padding: 0 0 0 20px;
+        text-align: left;
+    }
+    .sub-text {
+        font-size: 2vw;
+        font-weight: 900;
+        color: rgb(231, 121, 69);
+        font-family: 'Roboto Condensed', sans-serif;
+        justify-content: left;
+        padding: 0 0 0 60px;
+    }
+    .book {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Comic Neue', cursive;
+        color: var(--primary);
+        padding: 50px 0 0 0;
+    }
+    .services {
+        display: flex;
+        padding: 20px 100px 0 100px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+    .desc {
+        font-family: 'Roboto Condensed', sans-serif;
+        color: var(--primary);
+        font-size: 20px;
+        padding: 0 12px;
+    }
+    .bookBtn {
+        border: none;
+        outline: none;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background-color: var(--primary);
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 900;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    .bookBtn:hover {
+        background-color: var(--bg);
+        color: var(--secondary);
+        transition: .2s;
+    }
+    .button {
+        display: flex;
+        padding: 20px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .gallery-container{
+        flex-direction: column;
+        padding: 0;
+    }
+}
